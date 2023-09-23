@@ -3,13 +3,13 @@
 <!-- TOC -->
 * [SQLALCHEMY](#sqlalchemy)
   * [Базові функції](#базові-функції)
-    * [<a id="engine"></a> create_engine()](#a-idenginea-createengine)
+    * [create_engine()](#createengine)
     * [declarative_base()](#declarativebase)
     * [MetaData()](#metadata)
     * [metadata.create_all()](#metadatacreateall)
-    * [Session() <a id="session"></a>](#session-a-idsessiona)
+    * [Session()](#session)
     * [sessionmaker()](#sessionmaker)
-  * [<a id="models"></a> Моделі `sqlalchemy` (опис таблиць у вигляді класів)](#a-idmodelsa-моделі-sqlalchemy-опис-таблиць-у-вигляді-класів)
+  * [Моделі `sqlalchemy` (опис таблиць у вигляді класів)](#моделі-sqlalchemy-опис-таблиць-у-вигляді-класів)
     * [Column()](#column)
     * [ForeignKey()](#foreignkey)
     * [relationship()](#relationship)
@@ -74,7 +74,7 @@
 
 ## Базові функції
 
-### <a id="engine"></a> create_engine()
+### create_engine()
 створює об'єкт Engine, який відповідає за з'єднання з базою даних. 
 Приймає рядок підключення до бази даних.
 
@@ -122,7 +122,7 @@ print(metadata.tables)
 
 ***
 
-### Session() <a id="session"></a>
+### Session()
 створює об'єкт Session, який відповідає за сесії з базою даних.
 Сесія - це тимчасове з'єднання з базою даних, яке використовується для виконання запитів до бази даних.
 
@@ -132,7 +132,7 @@ from sqlalchemy.orm import Session
 session = Session(bind=engine)
 ```
 
-*bind* - вказує на те, який об'єкт [Engine](#engine) буде використовуватися для з'єднання з базою даних.
+*bind* - вказує на те, який об'єкт [Engine](#createengine) буде використовуватися для з'єднання з базою даних.
 
 ***
 
@@ -177,7 +177,7 @@ db - це [сесія](#session), яку "їлдить" (`yield`) функція
 
 ***
 
-## <a id="models"></a> Моделі `sqlalchemy` (опис таблиць у вигляді класів)
+## Моделі `sqlalchemy` (опис таблиць у вигляді класів)
 
 *Приклад опису таблиці у вигляді класу:*
 ```python
